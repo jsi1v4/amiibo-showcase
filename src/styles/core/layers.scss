@@ -1,0 +1,12 @@
+$layers: (
+  'base': 1,
+  'above-base': 2,
+  'overlay': 3,
+  'above-overlay': 4,
+  'below-top': 5,
+  'top': 6
+);
+
+@function get-layer($name: 'base') {
+  @return map-get($layers, $name);
+}

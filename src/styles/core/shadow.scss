@@ -1,0 +1,19 @@
+$shadow-key-color: alpha-color('grayscale', 'lighten-1', 0.16);
+$shadow-key: (
+  1: (
+    0px 1px 3px $shadow-key-color
+  ),
+  2: (
+    0px 4px 8px $shadow-key-color
+  ),
+  3: (
+    0px 16px 24px $shadow-key-color
+  ),
+  4: (
+    0px 20px 32px $shadow-key-color
+  )
+);
+
+@function get-shadow($name) {
+  @return map-get($shadow-key, $name);
+}
