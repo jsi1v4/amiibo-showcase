@@ -1,0 +1,24 @@
+{
+  "routes": {
+    "home": "/home",
+    "login": "/login",
+    "logout": "/logout"
+  },
+  "app": {
+    "user": {
+      "logout": "Logout"
+    },
+    "menu": {
+      "home": "Home"
+    }
+  },
+  "home": {
+    "title": "Home"
+  },
+  "login": {
+    "title": "Login"
+  },
+  "logout": {
+    "title": "Logout"
+  }
+}

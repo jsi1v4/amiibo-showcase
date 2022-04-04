@@ -1,0 +1,24 @@
+{
+  "routes": {
+    "home": "/inicio",
+    "login": "/entrar",
+    "logout": "/sair"
+  },
+  "app": {
+    "user": {
+      "logout": "Sair"
+    },
+    "menu": {
+      "home": "Inicio"
+    }
+  },
+  "home": {
+    "title": "Inicio"
+  },
+  "login": {
+    "title": "Entrar"
+  },
+  "logout": {
+    "title": "Sair"
+  }
+}
