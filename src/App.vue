@@ -1,7 +1,9 @@
-<script setup lang="ts"></script>
-
 <template>
-  <div></div>
+  <provider-auth>
+    <provider-http>
+      <provider-api>
+        <router-view />
+      </provider-api>
+    </provider-http>
+  </provider-auth>
 </template>
-
-<style></style>

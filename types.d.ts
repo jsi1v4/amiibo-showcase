@@ -1,8 +1,17 @@
 /// <reference types="vite/client" />
 
+import { defineComponent } from 'vue';
+import { DateTimeFormatResult, Locale } from 'vue-i18n';
+
 declare module '*.vue' {
-  import type { DefineComponent } from 'vue'
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/ban-types
-  const component: DefineComponent<{}, {}, any>
-  export default component
+  const component: ReturnType<typeof defineComponent>;
+  export default component;
+}
+
+declare module '@vue/runtime-core' {
+  interface ComponentCustomProperties {
+    $d(value: string): DateTimeFormatResult;
+    $d(value: string, key: string): DateTimeFormatResult;
+    $d(value: string, key: string, locale: Locale): DateTimeFormatResult;
+  }
 }
