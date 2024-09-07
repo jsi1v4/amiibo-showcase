@@ -2,6 +2,8 @@
 
 Projeto utilizado para aplicar conhecimentos do framework Vue 3 com Vite.
 
+> [**Clique aqui**](https://www.josepaulo.dev/amiibo-showcase/) para testar 🖖😎.
+
 </div>
 
 ![**Preview**](preview.gif)
