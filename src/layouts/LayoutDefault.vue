@@ -12,7 +12,7 @@ const { user } = useAuthProvider();
 
 <template>
   <div class="layout-default">
-    <app-user :title="user?.fullName" />
+    <app-user :title="user?.name" />
     <app-content>
       <base-progress-bar v-show="props.loading" />
       <slot />

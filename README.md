@@ -44,6 +44,7 @@ yarn install
 ### Executar em localhost
 
 ```sh
+# run in http://localhost:3000/amiibo-showcase/
 yarn dev
 ```
 

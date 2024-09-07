@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
 
 import envs from '@/envs';
 import i18n from '@/i18n';
@@ -28,7 +28,7 @@ const routes: RouteRecordRaw[] = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(envs.baseUrl),
+  history: createWebHashHistory(envs.baseUrl),
   routes
 });
 

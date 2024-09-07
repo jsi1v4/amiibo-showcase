@@ -48,6 +48,7 @@ const menuItems = [
   margin: get-space('md');
   top: 0;
   left: 0;
+  z-index: 99;
 
   .app-user__avatar {
     background-color: get-color('primary');

@@ -1,11 +1,12 @@
-import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import autoimport from 'unplugin-vue-components/vite';
 import path from 'path';
+import autoimport from 'unplugin-vue-components/vite';
+import { defineConfig } from 'vite';
 
 const src = path.resolve(__dirname, 'src');
 
 export default defineConfig({
+  base: '/amiibo-showcase/',
   plugins: [
     vue(),
     autoimport({

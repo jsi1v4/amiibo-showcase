@@ -2,7 +2,6 @@ export type UserSub = string;
 
 export interface AuthUser {
   sub: UserSub;
-  email: string;
-  fullName: string;
+  name: string;
   iat: number;
 }

@@ -1,5 +1,6 @@
 import jwtdecode from 'jwt-decode';
 import { computed, inject, provide } from 'vue';
+import { useRouter } from 'vue-router';
 
 import envs from '@/envs';
 import { AuthUser } from '@/types/auth';
@@ -9,6 +10,8 @@ import { useRef } from '@/utils/hooks';
 export const AuthProviderKey = Symbol('auth-provider');
 
 function factoryAuthProvider() {
+  const router = useRouter();
+
   const [accessToken, setAccessToken] = useRef<string | undefined>(
     envs.local.enabled ? envs.local.accessToken : loadCookie(envs.keys.core.accessToken)
   );
@@ -33,13 +36,13 @@ function factoryAuthProvider() {
   function login(renew?: boolean) {
     authOn(envs.local.accessToken || '');
 
-    window.location.replace('/');
+    router.push('/');
   }
 
   function logout() {
     authOff();
 
-    window.location.replace('/');
+    router.push('/login');
   }
 
   function handleUnauthorized() {
