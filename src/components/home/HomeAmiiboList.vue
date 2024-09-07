@@ -28,7 +28,7 @@ function onScroll(e) {
   <div class="home-amiibo-list" @scroll="onScroll">
     <base-row gap="sm">
       <base-col v-for="item in props.items" :key="item.id" lg="3" md="4" sm="6">
-        <base-card class="home-amiibo-list__item" height="320">
+        <base-card class="home-amiibo-list__item" height="320" overflow>
           <util-loading v-show="props.loading" />
           <base-text type="body-bold">{{ item.label }}</base-text>
           <img :src="item.value.image" height="250" />

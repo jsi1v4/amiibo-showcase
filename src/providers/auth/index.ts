@@ -1,9 +1,9 @@
-import { provide, inject, computed } from 'vue';
 import jwtdecode from 'jwt-decode';
+import { computed, inject, provide } from 'vue';
 
 import envs from '@/envs';
-import { loadCookie, removeCookie, saveCookie } from '@/utils/cookie';
 import { AuthUser } from '@/types/auth';
+import { loadCookie, removeCookie, saveCookie } from '@/utils/cookie';
 import { useRef } from '@/utils/hooks';
 
 export const AuthProviderKey = Symbol('auth-provider');
@@ -13,7 +13,7 @@ function factoryAuthProvider() {
     envs.local.enabled ? envs.local.accessToken : loadCookie(envs.keys.core.accessToken)
   );
   const user = computed<AuthUser | undefined>(() => {
-    if (accessToken.value) {
+    if (accessToken.value && !accessToken.value.includes('undefined')) {
       return jwtdecode(accessToken.value);
     }
     return undefined;

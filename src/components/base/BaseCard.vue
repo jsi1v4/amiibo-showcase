@@ -6,6 +6,7 @@ interface Props {
   width?: number | string;
   noTop?: boolean;
   noBottom?: boolean;
+  overflow?: boolean;
 }
 
 const props = defineProps<Props>();
@@ -31,7 +32,8 @@ const width = computed(() => {
       'base-card',
       {
         'base-card--no-top': props.noTop,
-        'base-card--no-bottom': props.noBottom
+        'base-card--no-bottom': props.noBottom,
+        'base-card--overflow': props.overflow
       }
     ]"
     :style="{ height, width }"
@@ -56,6 +58,10 @@ const width = computed(() => {
   &.base-card--no-bottom {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+  }
+
+  &.base-card--overflow {
+    overflow: hidden;
   }
 }
 </style>
