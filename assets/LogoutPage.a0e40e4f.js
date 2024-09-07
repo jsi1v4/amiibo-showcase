@@ -1,1 +1,0 @@
-import{u as t}from"./index.3799a7aa.js";import{h as e,O as r,k as n,t as s}from"./vendor.8648d41f.js";const i=e({setup(a){const o=t();return r(()=>{o.logout()}),(u,c)=>(n(),s("div"))}});export{i as default};
