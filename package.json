@@ -3,6 +3,7 @@
   "title": "Amiibo Showcase",
   "version": "1.0.0",
   "license": "MIT",
+  "author": "Jsi1v4 <git@jsi1v4.com>",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
